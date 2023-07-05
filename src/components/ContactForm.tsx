@@ -1,16 +1,13 @@
 import React, { FormEvent, ReactElement, useState } from 'react'
 import { BsArrowLeft } from "react-icons/bs"
-import { updateDecorator } from 'typescript';
-import { ContactModel } from '../models/contactModel'
 import { addContact, updateContactList } from '../redux/slices/contactSlice';
 import { useAppDispatch, useAppSelector } from '../redux/store';
 
 interface contactFormProps{
-  handleAddContactForm: (() => void ) | ((id:number) => void),
   closeContactForm: () => void,
 }
 
-const ContactForm = ({handleAddContactForm, closeContactForm}: contactFormProps) => {
+const ContactForm = ({closeContactForm}: contactFormProps) => {
  
   const { particular_contact, contact_list } = useAppSelector(store => store.contact)
   const [formData, setFormData] = useState({

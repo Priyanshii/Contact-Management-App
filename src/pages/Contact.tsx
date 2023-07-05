@@ -32,8 +32,8 @@ const Contact = () => {
   return (
     <>
       { (!showAddContactForm && !showEditContactForm) && <ContactsList handleAddContactForm={handleAddContactForm} handleEditContactForm={handleEditContactForm}/>}
-      { showAddContactForm && <ContactForm handleAddContactForm={handleAddContactForm} closeContactForm={closeContactForm}/> }
-      { showEditContactForm && <ContactForm handleAddContactForm={handleEditContactForm} closeContactForm={closeContactForm}/> }
+      { showAddContactForm && <ContactForm closeContactForm={closeContactForm}/> }
+      { showEditContactForm && <ContactForm closeContactForm={closeContactForm}/> }
     </>
 
   )
